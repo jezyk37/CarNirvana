@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: rgb(240, 240, 240);
+        }
+        /* .sectionpodstronaart{
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            display: block;
+        }
+        .toppodstronaart{
+            margin: 0 auto 0 auto;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        .toppodstronaart .opispodstronaart{
+            text-align: left;
+            margin: 0 50px;
+        }
+        .bottompodstronaart{
+            justify-content: space-between;
+            text-align: center;
+            width: 100%;
+        }
+        .informationsart{
+            outline: 5px solid black;
+            padding: 20px;
+        }
+        .informationsart{
+            width: 100% ;
+        } */
+
+        .sectionpodstronaart{
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+        }
+        .toppodstronaart{
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            width: 80%
+        }
+        .zdjęciaart{
+            width: 50%;
+            margin: 0 20px;
+        }
+        .opispodstronaart{
+            border-radius: 15px;
+            padding: 20px;
+            text-align: left;
+            width: 50%;
+            margin: 0 20px;
+            background-color: white;
+-webkit-box-shadow: 0px 0px 8px -2px rgb(26, 26, 26);
+-moz-box-shadow: 0px 0px 8px -2px rgb(49, 49, 49);
+box-shadow: 0px 0px 8px -2px rgb(24, 24, 24);
+        }
+    </style>
+</head>
+<body>
+
+
+    <header></header>
+
+    <section class="sectionpodstronaart">
+        <div class="toppodstronaart">
+            <div class="zdjęciaart">
+                <div id="zdjęcie">
+
+                </div>
+            </div>
+
+            <div class="opispodstronaart">
+                <div class="informationsart">
+                    <div id="tytul">
+
+                    </div>
+                    <div id="opis">
+        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="bottompodstronaart">
+
+        </div>
+        
+    </section>
+    
+</body>
+</html>
+
+<script>
+     function oferta(){
+        let oferta = [
+            {
+                tytul: "TurboTech X2000",
+                opis: " TurboTech X2000 to połączenie doskonałego designu, innowacyjnej technologii i wyjątkowej wydajności. Ten dynamiczny model został stworzony z myślą o entuzjastach motoryzacji poszukujących niezrównanego doświadczenia za kierownicą. Zaawansowany silnik TurboTech zapewnia imponującą moc, jednocześnie dbając o efektywność paliwową. Wyrafinowane zawieszenie i precyzyjne układy sterowania zapewniają niezrównaną stabilność i komfort jazdy nawet w najbardziej wymagających warunkach drogowych. TurboTech X2000 wyróżnia się również innowacyjnymi rozwiązaniami technologicznymi, które zapewniają bezpieczeństwo i wygodę podczas podróży. Wnętrze pojazdu zostało zaprojektowane z myślą o ergonomii i funkcjonalności, oferując kierowcy i pasażerom komfortową przestrzeń do relaksu.",
+                url: "https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=600",
+                cena: 1000
+            },
+            
+        ]
+        for(i=0; i<oferta.length; i++){
+            let tytul = oferta[i].tytul;
+            let opis = oferta[i].opis;
+            let url = oferta[i].url;
+
+            let h2 = document.createElement("h2")
+            let p = document.createElement("p")
+            let img = document.createElement("img")
+
+            h2.innerText = tytul;
+            p.innerText = opis;
+            img.src = url;
+
+            document.getElementById("tytul").appendChild(h2)
+            document.getElementById("opis").appendChild(p)
+            document.getElementById("zdjęcie").appendChild(img)
+
+        }
+     }
+
+     oferta()
+</script>
