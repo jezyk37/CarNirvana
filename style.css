@@ -1,22 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 body{
     margin: 0;
     padding: 0;
+    font-family: Source Code Pro;
 }
-nav{
+header{
     width: 100%;
 }
-nav img{
+header img{
     width: 5%;
     padding: 0px;
     margin: 0px;
 }
-nav ul{
+header ul{
     display: flex;
     justify-content: space-between;
     padding: 20px;
     margin: 0px;
 }
-nav li{
+header li{
     display: flex;
     align-items: center;
     list-style: none;
@@ -33,4 +35,57 @@ nav li{
     width: 50%;
     font-size: 20px;
     margin: 0px;
+}
+.Offerts{
+    margin-top: 50px;
+    width: 100%;
+    display: block;
+}
+.Offerts img{
+    width: 100%;
+}
+.Offerts .info{
+    display: flex;
+}
+.price{
+    display: flex;
+    justify-content: center;
+}
+.Offerts .car{
+    width: 400px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+.info img{
+    width: 20%;
+}
+.info div{
+    display: flex;
+    width: 80%;
+}
+.img img{
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.name{
+    display: flex;
+    justify-content: center;
+}
+.car:hover{
+    box-shadow: 5px 5px 20px black;
+    transition: 1s;
+    transform: scale(102%);
+}
+.Offerts .cars{
+    display: flex;
+    justify-content: space-around;
+}
+.Ofertynapis{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+.car{
+    transition: 0.7s;
 }
