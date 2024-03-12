@@ -9,9 +9,13 @@
 <body>
     <header>
         <ul>
-            <img src="CarNirvana.png">
+            <a href="index.html"><img src="CarNirvana.png"></a>
             <li>NAV</li>
-            <li><div id="zegar"></div></li>
+            <div id="zegar">
+                <div id="hours"></div>
+                <div id="minutes"></div>
+                <div id="seconds"></div>
+            </div>
         </ul>
     </header>
     <section class="About">
@@ -55,15 +59,41 @@
     </section>
 
     <section class="News">
-
+        <div class="Aktualnoscinapis"><h1>Aktualności:</h1></div>
+        <div></div>
     </section>
     <footer>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>E-mail: costam@gmail.com</li>
+            <li>Numer telefonu: 000 000 000</li>
+            <li>Lokalizacja: Jakastam 00</li>
+            <li>CarNirvana</li>
         </ul>
     </footer>
+    <script>
+        function updateClock(){
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            
+            if(hours < 10){
+                hours = "0" + hours;
+            } 
+            else{
+                hours = hours;
+            }
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+            
+            document.getElementById("hours").textContent = hours + ":";
+            document.getElementById("minutes").textContent = minutes + ":";
+            document.getElementById("seconds").textContent = seconds;
+        }
+        
+        setInterval(updateClock, 1000)
+        
+        updateClock();
+    </script>
 </body>
 </html>

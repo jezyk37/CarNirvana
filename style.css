@@ -8,7 +8,7 @@ header{
     width: 100%;
 }
 header img{
-    width: 5%;
+    width: 75%;
     padding: 0px;
     margin: 0px;
 }
@@ -23,6 +23,9 @@ header li{
     align-items: center;
     list-style: none;
 }
+header a{
+    width: 100px;
+}
 .About{
     background-image: url(onas.jpg);
     background-repeat: no-repeat;
@@ -33,11 +36,11 @@ header li{
 }
 .About p{
     width: 50%;
-    font-size: 20px;
+    padding-top: 30px;
+    font-size: 30px;
     margin: 0px;
 }
 .Offerts{
-    margin-top: 50px;
     width: 100%;
     display: block;
 }
@@ -84,8 +87,37 @@ header li{
 .Ofertynapis{
     display: flex;
     justify-content: center;
-    font-size: 50px;
+    font-size: 30px;
 }
 .car{
     transition: 0.7s;
+}
+.Aktualnoscinapis{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+footer{
+    background-color: black;
+    width: 100%;
+}
+footer li{
+    list-style: none;
+    color: white;
+}
+footer ul{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+#zegar{
+    font-size: 20px;
+    display: flex;
+}
+#zegar div{
+    display: flex;
+    align-items: center;
 }
