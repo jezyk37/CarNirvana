@@ -44,6 +44,12 @@
             width: 100%;
             justify-content: center;
             text-align: center;
+            display: block;
+        }
+        .sectionpodstronaart2{
+            width: 100%;
+            justify-content: center;
+            text-align: center;
             display: flex;
         }
         .toppodstronaart{
@@ -67,6 +73,19 @@
 -moz-box-shadow: 0px 0px 8px -2px rgb(49, 49, 49);
 box-shadow: 0px 0px 8px -2px rgb(24, 24, 24);
         }
+        .bottompodstronaart{
+            margin: 40px 0 0 0;
+            width: 80%;
+            display: flex;
+            justify-content: right;
+            text-align: center;
+        }
+        .bottompodstronaart button{
+            padding: 15px 50px;
+            background-color: rgb(0, 174, 255);
+            outline: 2px solid blue;
+            margin: 0 20px 0 0;
+        }
     </style>
 </head>
 <body>
@@ -75,27 +94,37 @@ box-shadow: 0px 0px 8px -2px rgb(24, 24, 24);
     <header></header>
 
     <section class="sectionpodstronaart">
-        <div class="toppodstronaart">
-            <div class="zdjęciaart">
-                <div id="zdjęcie">
-
-                </div>
-            </div>
-
-            <div class="opispodstronaart">
-                <div class="informationsart">
-                    <div id="tytul">
-
-                    </div>
-                    <div id="opis">
-        
+        <div class="sectionpodstronaart2">
+            <div class="toppodstronaart">
+                <div class="zdjęciaart">
+                    <div id="zdjęcie">
+    
                     </div>
                 </div>
-            </div>
+    
+                <div class="opispodstronaart">
+                    <div class="informationsart">
+                        <div id="tytul">
+    
+                        </div>
+                        <div id="opis">
             
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
+        
         <div class="bottompodstronaart">
-
+            <div>
+                <button class="">
+                    Kup
+                </button>
+                <h2 class="cenapodstronaart" id="cena">
+                    Cena
+                </h2>
+            </div>
         </div>
         
     </section>
