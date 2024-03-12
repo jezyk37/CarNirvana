@@ -33,12 +33,21 @@ header a{
     height: 1000px;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.background{
+    background-color: black;
+    width: 100%;
+    height: 1000px;
+    opacity: 0.5;
+    position: absolute;
 }
 .About p{
     width: 50%;
-    padding-top: 30px;
     font-size: 30px;
     margin: 0px;
+    height: 610px;
+    color: white;
 }
 .Offerts{
     width: 100%;
@@ -91,6 +100,7 @@ header a{
 }
 .car{
     transition: 0.7s;
+    cursor: pointer;
 }
 .Aktualnoscinapis{
     display: flex;
