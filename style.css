@@ -48,6 +48,7 @@ header a{
     margin: 0px;
     height: 610px;
     color: white;
+    position: absolute;
 }
 .Offerts{
     width: 100%;
@@ -69,9 +70,10 @@ header a{
     border-radius: 10px;
 }
 .info img{
-    width: 20%;
+    width: 8%;
+    margin: 10px;
 }
-.info div{
+.info p{
     display: flex;
     width: 80%;
 }
@@ -89,7 +91,7 @@ header a{
     transition: 1s;
     transform: scale(102%);
 }
-.Offerts .cars{
+.Offerts #cars{
     display: flex;
     justify-content: space-around;
 }
