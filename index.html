@@ -25,36 +25,8 @@
 
     <section class="Offerts">
         <div class="Ofertynapis"><h1>Oferty dnia:</h1></div>
-        <div class="cars">
-            <div class="car">
-                <div class="img"><img src="auto1.jpg" class="auto"></a></div><hr>
-                <div class="name"><h1>Nazwa</h1></a></div><hr>
-                <div class="info">
-                    <div class="year"><img src="rok.svg" class="icon">2023</div>
-                    <div class="gearbox"><img src="biegi.svg" class="icon">Manual</div>
-                    <div class="fuel"><img src="paliwo.svg" class="icon">Hybryda</div>
-                </div>
-                <div class="price"><h1>60000zł</h1></div>
-            </div>
-            <div class="car">
-                <div class="img"><img src="auto1.jpg" class="auto"></a></div><hr>
-                <div class="name"><h1>Nazwa</h1></a></div><hr>
-                <div class="info">
-                    <div class="year"><img src="rok.svg" class="icon">2023</div>
-                    <div class="gearbox"><img src="biegi.svg" class="icon">Manual</div>
-                    <div class="fuel"><img src="paliwo.svg" class="icon">Hybryda</div>
-                </div>
-                <div class="price"><h1>60000zł</h1></div>
-            </div>
-            <div class="car">
-                <div class="img"><img src="auto1.jpg" class="auto"></a></div><hr>
-                <div class="name"><h1>Nazwa</h1></a></div><hr>
-                <div class="info">
-                    <div class="year"><img src="rok.svg" class="icon">2023</div>
-                    <div class="gearbox"><img src="biegi.svg" class="icon">Manual</div>
-                    <div class="fuel"><img src="paliwo.svg" class="icon">Hybryda</div>
-                </div>
-                <div class="price"><h1>60000zł</h1></div>
+            <div id="cars">
+    
             </div>
         </div>
     </section>
@@ -91,10 +63,120 @@
             document.getElementById("minutes").textContent = minutes + ":";
             document.getElementById("seconds").textContent = seconds;
         }
-        
         setInterval(updateClock, 1000)
         
         updateClock();
+
+        function oferta(){
+        let oferta = [
+            {
+                url: "auto1.jpg",
+                nazwa: "Nazwa",
+                rok: "2023",
+                biegi: "Manual",
+                paliwo: "Hybryda",
+                ikona_rok: "rok.svg",
+                ikona_biegi: "biegi.svg",
+                ikona_paliwo: "paliwo.svg", 
+                h1_price: "60000zł",
+            },
+            {
+                url: "auto1.jpg",
+                nazwa: "Nazwa",
+                rok: "2023",
+                biegi: "Manual",
+                paliwo: "Hybryda",
+                ikona_rok: "rok.svg",
+                ikona_biegi: "biegi.svg",
+                ikona_paliwo: "paliwo.svg", 
+                h1_price: "60000zł",
+            },
+            {
+                url: "auto1.jpg",
+                nazwa: "Nazwa",
+                rok: "2023",
+                biegi: "Manual",
+                paliwo: "Hybryda",
+                ikona_rok: "rok.svg",
+                ikona_biegi: "biegi.svg",
+                ikona_paliwo: "paliwo.svg", 
+                h1_price: "60000zł",
+            },
+            
+        ]
+        for(i=0; i<oferta.length; i++){
+            let nazwa = oferta[i].nazwa;
+            let rok1 = oferta[i].rok;
+            let url = oferta[i].url;
+            let biegi1 = oferta[i].biegi;
+            let paliwo1 = oferta[i].paliwo;
+            let ikona_rok = oferta[i].ikona_rok;
+            let ikona_biegi = oferta[i].ikona_biegi;
+            let ikona_paliwo = oferta[i].ikona_paliwo;
+            let price1 = oferta[i].h1_price;
+            
+            
+            let car = document.createElement("div")
+            let img = document.createElement("div")
+            let img_auta = document.createElement("img")
+            let name = document.createElement("div")
+            let h1 = document.createElement("h1")
+            let info = document.createElement("div")
+            let price = document.createElement("div")
+            let h1_price = document.createElement("h1")
+            let rok = document.createElement("p")
+            let biegi = document.createElement("p")
+            let paliwo = document.createElement("p")
+            let h2 = document.createElement("h2")
+            let p = document.createElement("p")
+            let icon_rok = document.createElement("img")
+            let icon_biegi = document.createElement("img")
+            let icon_paliwo = document.createElement("img")
+            let hr = document.createElement("hr")
+            car.classList.add("car")
+            img.classList.add("img")
+            name.classList.add("name")
+            info.classList.add("info")
+            price.classList.add("price")
+            rok.classList.add("rok")
+            biegi.classList.add("biegi")
+            paliwo.classList.add("paliwo")
+            icon_rok.classList.add("icon_rok")
+            icon_biegi.classList.add("icon_biegi")
+            icon_paliwo.classList.add("icon_paliwo")
+
+            h1.innerText = nazwa;
+            img_auta.src = url;
+            rok.innerText = rok1;
+            biegi.innerText = biegi1;
+            paliwo.innerText = paliwo1;
+            icon_rok.src = ikona_rok;
+            icon_biegi.src = ikona_biegi;
+            icon_paliwo.src = ikona_paliwo;
+            h1_price.innerText = price1;
+
+
+            document.getElementById("cars").appendChild(car).appendChild(img).appendChild(img_auta)
+            document.getElementById("cars").appendChild(car).appendChild(name).appendChild(h1)
+
+
+            document.getElementById("cars").appendChild(car).appendChild(info).appendChild(icon_rok)
+            document.getElementById("cars").appendChild(car).appendChild(info).appendChild(rok)
+
+            document.getElementById("cars").appendChild(car).appendChild(info).appendChild(icon_biegi)
+            document.getElementById("cars").appendChild(car).appendChild(info).appendChild(biegi)
+
+            document.getElementById("cars").appendChild(car).appendChild(info).appendChild(icon_paliwo)
+            document.getElementById("cars").appendChild(car).appendChild(info).appendChild(paliwo)
+
+
+            document.getElementById("cars").appendChild(car).appendChild(price).appendChild(h1_price)
+
+
+        }
+     }
+     oferta()
+
     </script>
 </body>
 </html>
