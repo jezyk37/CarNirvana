@@ -1,26 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
-   <title>CarNirvana</title>
-   <link rel="shortcut icon" href="CarNirvana.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CarNirvana</title>
 </head>
 <body>
-   <div class="nav">
-      <div class="img"><a href="#"><img src="CarNirvana.png"></a></div>
-      <label for="toggle">&#9776;</label>
-      <input type="checkbox" id="toggle"/>
-      <div class="menu">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Agent</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
-      </div>
-    </div>
+    <header>
+        <ul>
+            <div class="logo"><a href="index.html"><img src="img/CarNirvana.png"></a></div>
+            <div class="meny">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle"/>
+                <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Agent</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+                </div>
+            </div>
+            <div id="zegar">
+                <div id="hours"></div>
+                <div id="minutes"></div>
+                <div id="seconds"></div>
+            </div>
+        </ul>
+    </header>
+    <section class="About">
+        <div class="background"></div>
+        <p>
+            Witaj w CarNirvana - twoim przyjaznym przystanku w świecie motoryzacji!<br>
+            
+            CarNirvana powstało z pasji do samochodów i dążenia do stworzenia miejsca, które zapewni Ci kompleksową, zaufaną i satysfakcjonującą obsługę w każdym aspekcie Twojej przygody z motoryzacją.<br>
+            
+            Nasza firma zrodziła się z marzeń o stworzeniu przestrzeni, gdzie pasja do samochodów łączy się z profesjonalizmem oraz troską o naszych klientów. Od momentu założenia wkładamy ogromny wysiłek, aby dostarczyć Ci nie tylko wysokiej jakości pojazdy, ale również kompleksowe wsparcie, doradztwo i usługi serwisowe.<br>
+            
+            W CarNirvana stawiamy na transparentność, uczciwość i doskonałą obsługę klienta. Nasz zespół składa się z doświadczonych ekspertów, którzy służą Ci pomocą na każdym etapie Twojej podróży z naszą firmą.<br>
+            
+            Niezależnie od tego, czy szukasz nowego samochodu, planujesz sprzedać swój obecny pojazd, czy też potrzebujesz wsparcia serwisowego, CarNirvana jest tutaj, aby Ci pomóc. Naszym celem jest sprawić, aby Twoje doświadczenie z nami było nie tylko wyjątkowe, ale również bezproblemowe i satysfakcjonujące.<br>
+            
+            Dołącz do naszej społeczności i pozwól nam być Twoim przewodnikiem w fascynującym świecie motoryzacji!<br>
+            
+            Zespół CarNirvana</p>
+    </section>
 
-</div>
+    <section class="Offerts">
+        <div class="Ofertynapis"><h1>Oferty dnia:</h1></div>
+        <div id="cars">
+    
+        </div>
+    </section>
+    <section class="News">
+        <div class="Aktualnoscinapis"><h1>Aktualności:</h1></div>
+        <div></div>
+    </section>
+    <footer>
+        <ul>
+            <li>E-mail: CarNirvana@gmail.com</li>
+            <li>Numer telefonu: 021 069 037</li>
+            <li>Lokalizacja: CarNirvanowa 69</li>
+            <li>CarNirvana</li>
+        </ul>
+    </footer>
+    <script>
+        function updateClock(){
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            
+            if(hours < 10){
+                hours = "0" + hours;
+            } 
+            else{
+                hours = hours;
+            }
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+            
+            document.getElementById("hours").textContent = hours + ":";
+            document.getElementById("minutes").textContent = minutes + ":";
+            document.getElementById("seconds").textContent = seconds;
+        }
+        setInterval(updateClock, 1000)
+        
+        updateClock();
+
+        function oferta(){
+        let oferta = [
+        {
+            id: "auto1",
+            url: "img/auto1.jpg",
+            nazwa: "Fiat 126 Maluch",
+            rok: "1999",
+            biegi: "Manual",
+            paliwo: "Benzyna",
+            ikona_rok: "img/rok.svg",
+            ikona_biegi: "img/biegi.svg",
+            ikona_paliwo: "img/paliwo.svg", 
+            h1_price: "40000zł",
+        },
+        {
+            id: "auto2",
+            url: "img/auto2.jpg",
+            nazwa: "Mercedes-AMG Black Series",
+            rok: "2018",
+            biegi: "Automat",
+            paliwo: "Benzyna",
+            ikona_rok: "img/rok.svg",
+            ikona_biegi: "img/biegi.svg",
+            ikona_paliwo: "img/paliwo.svg", 
+            h1_price: "20000000zł",
+        },
+        {
+            id: "auto3",
+            url: "img/auto3.jpg",
+            nazwa: "Ford Transit 350",
+            rok: "2010",
+            biegi: "Manual",
+            paliwo: "Diesel",
+            ikona_rok: "img/rok.svg",
+            ikona_biegi: "img/biegi.svg",
+            ikona_paliwo: "img/paliwo.svg", 
+            h1_price: "20000zł",
+        },
+    ];
+    
+    for(let i = 0; i < oferta.length; i++){
+        let id = oferta[i].id;
+        let nazwa = oferta[i].nazwa;
+        let rok1 = oferta[i].rok;
+        let url = oferta[i].url;
+        let biegi1 = oferta[i].biegi;
+        let paliwo1 = oferta[i].paliwo;
+        let ikona_rok = oferta[i].ikona_rok;
+        let ikona_biegi = oferta[i].ikona_biegi;
+        let ikona_paliwo = oferta[i].ikona_paliwo;
+        let price1 = oferta[i].h1_price;
+        let rozwin1 = oferta[i].rozwin;
+        let kup1 = oferta[i].kup;
+
+        let car = document.createElement("a");
+        let img = document.createElement("div");
+        let img_auta = document.createElement("img");
+        let name = document.createElement("div");
+        let h1 = document.createElement("h1");
+        let info = document.createElement("div");
+        let price = document.createElement("div");
+        let h1_price = document.createElement("h1");
+        let rok = document.createElement("p");
+        let biegi = document.createElement("p");
+        let paliwo = document.createElement("p");
+        let h2 = document.createElement("h2");
+        let p = document.createElement("p");
+        let icon_rok = document.createElement("img");
+        let icon_biegi = document.createElement("img");
+        let icon_paliwo = document.createElement("img");
+
+        car.classList.add("car");
+        img.classList.add("img");
+        name.classList.add("name");
+        info.classList.add("info");
+        price.classList.add("price");
+        rok.classList.add("rok");
+        biegi.classList.add("biegi");
+        paliwo.classList.add("paliwo");
+        icon_rok.classList.add("icon_rok");
+        icon_biegi.classList.add("icon_biegi");
+        icon_paliwo.classList.add("icon_paliwo");
+
+        car.setAttribute("href", "auta/" + id + ".html");
+
+        h1.innerText = nazwa;
+        img_auta.src = url;
+        rok.innerText = rok1;
+        biegi.innerText = biegi1;
+        paliwo.innerText = paliwo1;
+        icon_rok.src = ikona_rok;
+        icon_biegi.src = ikona_biegi;
+        icon_paliwo.src = ikona_paliwo;
+        h1_price.innerText = price1;
+
+        document.getElementById("cars").appendChild(car).appendChild(img).appendChild(img_auta)
+        document.getElementById("cars").appendChild(car).appendChild(name).appendChild(h1)
+
+
+        document.getElementById("cars").appendChild(car).appendChild(info).appendChild(icon_rok)
+        document.getElementById("cars").appendChild(car).appendChild(info).appendChild(rok)
+
+        document.getElementById("cars").appendChild(car).appendChild(info).appendChild(icon_biegi)
+        document.getElementById("cars").appendChild(car).appendChild(info).appendChild(biegi)
+
+        document.getElementById("cars").appendChild(car).appendChild(info).appendChild(icon_paliwo)
+        document.getElementById("cars").appendChild(car).appendChild(info).appendChild(paliwo)
+
+        document.getElementById("cars").appendChild(car).appendChild(price).appendChild(h1_price)
+    }
+    }
+     oferta()
+    </script>
 </body>
 </html>
