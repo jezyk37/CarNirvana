@@ -11,7 +11,7 @@
     <header></header>
 
     <section class="sectionpodstronaart">
-        <div class="sectionpodstronaart2">
+        <!-- <div class="sectionpodstronaart2">
             <div class="toppodstronaart">
                 <div class="zdjęciaart">
                     <div id="zdjęcie">
@@ -29,100 +29,166 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
-            <div class="bottompodstronaart">
-                <div>
-                    <button class="">
-                        Kup
-                    </button>
-                    <h2 class="cenapodstronaart" id="cena">
-                        Cena
-                    </h2>
-                </div>
-            </div>  
         </div>
         
-        
+        <div class="bottompodstronaart">
+            <div>
+                <button class="">
+                    Kup
+                </button>
+                <h2 class="cenapodstronaart" id="cena">
+                    Cena
+                </h2>
+            </div>
+        </div> -->
         
     </section>
+        
     
 </body>
 </html>
 
 <script>
      function oferta(){
-        let oferta = [
-            {
-                tytul: "TurboTech X2000",
-                opis: " TurboTech X2000 to połączenie doskonałego designu, innowacyjnej technologii i wyjątkowej wydajności. Ten dynamiczny model został stworzony z myślą o entuzjastach motoryzacji poszukujących niezrównanego doświadczenia za kierownicą. Zaawansowany silnik TurboTech zapewnia imponującą moc, jednocześnie dbając o efektywność paliwową. Wyrafinowane zawieszenie i precyzyjne układy sterowania zapewniają niezrównaną stabilność i komfort jazdy nawet w najbardziej wymagających warunkach drogowych. TurboTech X2000 wyróżnia się również innowacyjnymi rozwiązaniami technologicznymi, które zapewniają bezpieczeństwo i wygodę podczas podróży. Wnętrze pojazdu zostało zaprojektowane z myślą o ergonomii i funkcjonalności, oferując kierowcy i pasażerom komfortową przestrzeń do relaksu.",
-                url: "https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=600",
-                nazwa: "Fiat 126 Maluch",
-                rok: "1999",
-                biegi: "Manual",
-                paliwo: "Benzyna",
-                cena: 1000
-            },
+        // let oferta = [
+        //     {
+        //         tytul: "TurboTech X2000",
+        //         opis: " TurboTech X2000 to połączenie doskonałego designu, innowacyjnej technologii i wyjątkowej wydajności. Ten dynamiczny model został stworzony z myślą o entuzjastach motoryzacji poszukujących niezrównanego doświadczenia za kierownicą. Zaawansowany silnik TurboTech zapewnia imponującą moc, jednocześnie dbając o efektywność paliwową. Wyrafinowane zawieszenie i precyzyjne układy sterowania zapewniają niezrównaną stabilność i komfort jazdy nawet w najbardziej wymagających warunkach drogowych. TurboTech X2000 wyróżnia się również innowacyjnymi rozwiązaniami technologicznymi, które zapewniają bezpieczeństwo i wygodę podczas podróży. Wnętrze pojazdu zostało zaprojektowane z myślą o ergonomii i funkcjonalności, oferując kierowcy i pasażerom komfortową przestrzeń do relaksu.",
+        //         url: "https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=600",
+        //         nazwa: "Fiat 126 Maluch",
+        //         rok: "1999",
+        //         biegi: "Manual",
+        //         paliwo: "Benzyna",
+        //         cena: 1000
+        //     },
             
-        ]
-        for(i=0; i<oferta.length; i++){
-            let tytul = oferta[i].tytul;
-            let opis = oferta[i].opis;
-            let url = oferta[i].url;
-            let rok1 = oferta[i].rok;
-            let biegi1 = oferta[i].biegi;
-            let paliwo1 = oferta[i].paliwo;
+        // ]
+        // for(i=0; i<oferta.length; i++){
+        //     let tytul = oferta[i].tytul;
+        //     let opis = oferta[i].opis;
+        //     let url = oferta[i].url;
+        //     let rok1 = oferta[i].rok;
+        //     let biegi1 = oferta[i].biegi;
+        //     let paliwo1 = oferta[i].paliwo;
 
 
-            let div_1 = document.createElement("div")
-            let div_2 = document.createElement("div")
-            let div_3 = document.createElement("div")
-            let div_4 = document.createElement("div")
-            let div_5 = document.createElement("div")
-            let div_6 = document.createElement("div")
-            let div_7 = document.createElement("div")
-            let div_8 = document.createElement("div")
-            let div_9 = document.createElement("div")
-            let div_10 = document.createElement("div")
+        //     let div_1 = document.createElement("div")
+        //     let div_2 = document.createElement("div")
+        //     let div_3 = document.createElement("div")
+        //     let div_4 = document.createElement("div")
+        //     let div_5 = document.createElement("div")
+        //     let div_6 = document.createElement("div")
+        //     let div_7 = document.createElement("div")
+        //     let div_8 = document.createElement("div")
+        //     let div_9 = document.createElement("div")
+        //     let div_10 = document.createElement("div")
 
 
-            let h2 = document.createElement("h2")
-            let p = document.createElement("p")
-            let img = document.createElement("img")
-            let opis_lista = document.createElement("ul")
-            let rok = document.createElement("li");
-            let biegi = document.createElement("li");
-            let paliwo = document.createElement("li");
+        //     let h2 = document.createElement("h2")
+        //     let p = document.createElement("p")
+        //     let img = document.createElement("img")
+        //     let opis_lista = document.createElement("ul")
+        //     let rok = document.createElement("li");
+        //     let biegi = document.createElement("li");
+        //     let paliwo = document.createElement("li");
 
-            // rok.classList.add("rok");
-            // biegi.classList.add("biegi");
-            // paliwo.classList.add("paliwo");
+        //     // rok.classList.add("rok");
+        //     // biegi.classList.add("biegi");
+        //     // paliwo.classList.add("paliwo");
 
-            div_1.classList.add("sectionpodstronaart2")
-            div_2.classList.add("toppodstronaart")
-            div_3.classList.add("zdjęciaart")
-            div_4.classList.add("zdjęcie")
-            div_5.classList.add("opispodstronaart")
-            div_6.classList.add("informationsart")
-            div_7.classList.add("tytul")
-            div_8.classList.add("opis")
-            div_9.classList.add("bottompodstronaart")
-            div_10.classList.add("cenapodstronaart")
+        //     div_1.classList.add("sectionpodstronaart2")
+        //     div_2.classList.add("toppodstronaart")
+        //     div_3.classList.add("zdjęciaart")
+        //     div_4.classList.add("zdjęcie")
+        //     div_5.classList.add("opispodstronaart")
+        //     div_6.classList.add("informationsart")
+        //     div_7.classList.add("tytul")
+        //     div_8.classList.add("opis")
+        //     div_9.classList.add("bottompodstronaart")
+        //     // div_10.classList.add("")
 
-            h2.innerText = tytul;
-            p.innerText = opis;
-            img.src = url;
-            rok.innerText = rok1;
-            biegi.innerText = biegi1;
-            paliwo.innerText = paliwo1;
+        //     h2.innerText = tytul;
+        //     p.innerText = opis;
+        //     img.src = url;
+        //     rok.innerText = rok1;
+        //     biegi.innerText = biegi1;
+        //     paliwo.innerText = paliwo1;
 
 
             
-            document.getElementById("tytul").appendChild(h2)
-            document.getElementById("opis").appendChild(p)
-            document.getElementById("zdjęcie").appendChild(img)
+            
+            
+        //     document.getElementById("section").appendChild(div_1).appendChild(div_2).appendChild(div_3).appendChild(div_4).appendChild(img)
 
-        }
+        //     document.getElementById("section").appendChild(div_1).appendChild(div_2).appendChild(div_5).appendChild(div_6).appendChild(div_7).appendChild(tytul)
+
+        //     document.getElementById("section").appendChild(div_1).appendChild(div_2).appendChild(div_5).appendChild(div_6).appendChild(div_8).appendChild(opis)
+
+        //     document.getElementById("section").appendChild(div_1).appendChild(div_9).appendChild(cena)
+
+
+
+        // }
+
+            let oferta = [
+                {
+                    url: "https://www.dolina-noteci.pl/data/include/img/news/1674561198.jpg",
+                    tytul: "TurboTech X2000",
+                    rok: "1999",
+                    biegi: "Manual",
+                    paliwo: "Benzyna",
+                    cena: 1000,
+                    opis: " TurboTech X2000 to połączenie doskonałego designu, innowacyjnej technologii i wyjątkowej wydajności. Ten dynamiczny model został stworzony z myślą o entuzjastach motoryzacji poszukujących niezrównanego doświadczenia za kierownicą. Zaawansowany silnik TurboTech zapewnia imponującą moc, jednocześnie dbając o efektywność paliwową. Wyrafinowane zawieszenie i precyzyjne układy sterowania zapewniają niezrównaną stabilność i komfort jazdy nawet w najbardziej wymagających warunkach drogowych. TurboTech X2000 wyróżnia się również innowacyjnymi rozwiązaniami technologicznymi, które zapewniają bezpieczeństwo i wygodę podczas podróży. Wnętrze pojazdu zostało zaprojektowane z myślą o ergonomii i funkcjonalności, oferując kierowcy i pasażerom komfortową przestrzeń do relaksu.",
+                }
+            ]
+
+            let singleProduct = document.querySelector(".sectionpodstronaart");
+            for(let i = 0; i<oferta.length; i++){
+                let newProduct = document.createElement("article")
+                newProduct.innerHTML = `
+                <div class="sectionpodstronaart2">
+                    <div class="toppodstronaart">
+                        <div class="zdjęciaart">
+                            <div id="zdjęcie">
+                                <img src="${oferta[i].url}">
+                            </div>
+                        </div>
+                    
+                        <div class="opispodstronaart">
+                            <div class="informationsart">
+                                <div id="tytul">
+                                    <h1>${oferta[i].tytul}</h1>
+                                </div>
+                                <div id="opis_div">
+                                    <ul id="lista">
+                                        <li>Rok: ${oferta[i].rok}</li>
+                                        <li>Paliwo: ${oferta[i].paliwo}</li>
+                                        <li>Biegi: ${oferta[i].biegi}</li>
+                                    </ul>
+                                    <p id="opis">
+                                        ${oferta[i].opis}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottompodstronaart">
+                    <div>
+                        <button class="">
+                            Kup
+                        </button>
+                        <h2 class="cenapodstronaart" id="cena">
+                            Cena
+                        </h2>
+                    </div>
+                </div>
+                `;
+                singleProduct.appendChild(newProduct);            
+            }
+
      }
 
      oferta()
