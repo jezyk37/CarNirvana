@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css"
 </head>
 <body>
-
-
-    <header></header>
-
+    <header>
+        <ul>
+            <div class="logo"><a href="index.html"><img src="img/CarNirvana.png"></a></div>
+            <div class="meny">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle"/>
+                <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Agent</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+                </div>
+            </div>
+            <div id="zegar">
+                <div id="hours"></div>
+                <div id="minutes"></div>
+                <div id="seconds"></div>
+            </div>
+        </ul>
+    </header>
     <section class="sectionpodstronaart">
         <!-- <div class="sectionpodstronaart2">
             <div class="toppodstronaart">
@@ -44,8 +62,14 @@
         </div> -->
         
     </section>
-        
-    
+    <footer>
+        <ul>
+            <li>E-mail: CarNirvana@gmail.com</li>
+            <li>Numer telefonu: 021 069 037</li>
+            <li>Lokalizacja: CarNirvanowa 69</li>
+            <li>CarNirvana</li>
+        </ul>
+    </footer>
 </body>
 </html>
 
@@ -176,12 +200,12 @@
                 </div>
                 
                 <div class="bottompodstronaart">
-                    <div>
-                        <button class="">
+                    <div class="buy">
+                        <button class="kup">
                             Kup
                         </button>
                         <h2 class="cenapodstronaart" id="cena">
-                            Cena
+                            Cena:
                         </h2>
                     </div>
                 </div>
@@ -190,6 +214,28 @@
             }
 
      }
-
      oferta()
+
+     function updateClock(){
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            
+            if(hours < 10){
+                hours = "0" + hours;
+            } 
+            else{
+                hours = hours;
+            }
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+            
+            document.getElementById("hours").textContent = hours + ":";
+            document.getElementById("minutes").textContent = minutes + ":";
+            document.getElementById("seconds").textContent = seconds;
+        }
+        setInterval(updateClock, 1000)
+        
+        updateClock();
 </script>
