@@ -4,60 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            background-color: rgb(240, 240, 240);
-        }
-        .sectionpodstronaart{
-            width: 100%;
-            justify-content: center;
-            text-align: center;
-            display: block;
-        }
-        .sectionpodstronaart2{
-            width: 100%;
-            justify-content: center;
-            text-align: center;
-            display: flex;
-        }
-        .toppodstronaart{
-            justify-content: center;
-            text-align: center;
-            display: flex;
-            width: 80%
-        }
-        .zdjęciaart{
-            width: 50%;
-            margin: 0 20px;
-        }
-        .opispodstronaart{
-            border-radius: 15px;
-            padding: 20px;
-            text-align: left;
-            width: 50%;
-            margin: 0 20px;
-            background-color: white;
--webkit-box-shadow: 0px 0px 8px -2px rgb(26, 26, 26);
--moz-box-shadow: 0px 0px 8px -2px rgb(49, 49, 49);
-box-shadow: 0px 0px 8px -2px rgb(24, 24, 24);
-        }
-        .bottompodstronaart{
-            margin: 40px 0 0 0;
-            width: 80%;
-            display: flex;
-            justify-content: right;
-            text-align: center;
-        }
-        .bottompodstronaart button{
-            padding: 15px 50px;
-            background-color: rgb(0, 174, 255);
-            outline: 2px solid blue;
-            margin: 0 20px 0 0;
-        }
-    </style>
 </head>
 <body>
 
@@ -85,18 +31,19 @@ box-shadow: 0px 0px 8px -2px rgb(24, 24, 24);
                 </div>
                 
             </div>
+            <div class="bottompodstronaart">
+                <div>
+                    <button class="">
+                        Kup
+                    </button>
+                    <h2 class="cenapodstronaart" id="cena">
+                        Cena
+                    </h2>
+                </div>
+            </div>  
         </div>
         
-        <div class="bottompodstronaart">
-            <div>
-                <button class="">
-                    Kup
-                </button>
-                <h2 class="cenapodstronaart" id="cena">
-                    Cena
-                </h2>
-            </div>
-        </div>
+        
         
     </section>
     
@@ -110,6 +57,10 @@ box-shadow: 0px 0px 8px -2px rgb(24, 24, 24);
                 tytul: "TurboTech X2000",
                 opis: " TurboTech X2000 to połączenie doskonałego designu, innowacyjnej technologii i wyjątkowej wydajności. Ten dynamiczny model został stworzony z myślą o entuzjastach motoryzacji poszukujących niezrównanego doświadczenia za kierownicą. Zaawansowany silnik TurboTech zapewnia imponującą moc, jednocześnie dbając o efektywność paliwową. Wyrafinowane zawieszenie i precyzyjne układy sterowania zapewniają niezrównaną stabilność i komfort jazdy nawet w najbardziej wymagających warunkach drogowych. TurboTech X2000 wyróżnia się również innowacyjnymi rozwiązaniami technologicznymi, które zapewniają bezpieczeństwo i wygodę podczas podróży. Wnętrze pojazdu zostało zaprojektowane z myślą o ergonomii i funkcjonalności, oferując kierowcy i pasażerom komfortową przestrzeń do relaksu.",
                 url: "https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=600",
+                nazwa: "Fiat 126 Maluch",
+                rok: "1999",
+                biegi: "Manual",
+                paliwo: "Benzyna",
                 cena: 1000
             },
             
@@ -118,15 +69,55 @@ box-shadow: 0px 0px 8px -2px rgb(24, 24, 24);
             let tytul = oferta[i].tytul;
             let opis = oferta[i].opis;
             let url = oferta[i].url;
+            let rok1 = oferta[i].rok;
+            let biegi1 = oferta[i].biegi;
+            let paliwo1 = oferta[i].paliwo;
+
+
+            let div_1 = document.createElement("div")
+            let div_2 = document.createElement("div")
+            let div_3 = document.createElement("div")
+            let div_4 = document.createElement("div")
+            let div_5 = document.createElement("div")
+            let div_6 = document.createElement("div")
+            let div_7 = document.createElement("div")
+            let div_8 = document.createElement("div")
+            let div_9 = document.createElement("div")
+            let div_10 = document.createElement("div")
+
 
             let h2 = document.createElement("h2")
             let p = document.createElement("p")
             let img = document.createElement("img")
+            let opis_lista = document.createElement("ul")
+            let rok = document.createElement("li");
+            let biegi = document.createElement("li");
+            let paliwo = document.createElement("li");
+
+            // rok.classList.add("rok");
+            // biegi.classList.add("biegi");
+            // paliwo.classList.add("paliwo");
+
+            div_1.classList.add("sectionpodstronaart2")
+            div_2.classList.add("toppodstronaart")
+            div_3.classList.add("zdjęciaart")
+            div_4.classList.add("zdjęcie")
+            div_5.classList.add("opispodstronaart")
+            div_6.classList.add("informationsart")
+            div_7.classList.add("tytul")
+            div_8.classList.add("opis")
+            div_9.classList.add("bottompodstronaart")
+            div_10.classList.add("cenapodstronaart")
 
             h2.innerText = tytul;
             p.innerText = opis;
             img.src = url;
+            rok.innerText = rok1;
+            biegi.innerText = biegi1;
+            paliwo.innerText = paliwo1;
 
+
+            
             document.getElementById("tytul").appendChild(h2)
             document.getElementById("opis").appendChild(p)
             document.getElementById("zdjęcie").appendChild(img)
