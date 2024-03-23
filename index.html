@@ -54,7 +54,9 @@
     </section>
     <section class="News">
         <div class="Aktualnoscinapis"><h1>Aktualności:</h1></div>
-        <div></div>
+        <div id="newsy">
+
+        </div>
     </section>
     <footer>
         <ul>
@@ -199,7 +201,81 @@
         document.getElementById("cars").appendChild(car).appendChild(price).appendChild(h1_price)
     }
     }
-     oferta()
+     oferta();
+
+     function nowosc(){
+        let nowosc = [
+            {
+                idn: "new1",
+                img: "img/nowosc1.jpg",
+                name: "COS",
+                opis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum suscipit eros venenatis finibus. Phasellus et leo sed nisi placerat varius. Quisque vitae convallis lacus. Phasellus ac sem ligula. Phasellus posuere, elit nec luctus blandit, dui nunc volutpat nulla, ut feugiat massa nisl vitae orci. Aliquam porttitor vel neque sed tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam sodales pretium consequat. Vestibulum vel condimentum lacus, eget ultrices felis. Mauris et odio at turpis placerat placerat. Vestibulum sit amet purus erat. Phasellus molestie, arcu id vestibulum convallis, arcu metus consequat turpis, vitae tempus lacus tellus quis elit. Maecenas consequat sapien quis lectus euismod, quis bibendum dui tempor. Aliquam et sem ultrices, aliquet massa et, congue purus. Pellentesque ante tellus, malesuada tincidunt elit eget, blandit vehicula urna. Nulla ornare interdum arcu, id maximus elit consequat sed. Nulla sed ante mattis, aliquam dui sed, congue justo. Cras rhoncus malesuada erat, quis tincidunt mauris elementum cursus. Proin non convallis leo, eu congue arcu. Nulla facilisi. Integer ultricies quis massa efficitur pellentesque. Suspendisse potenti. Aenean rhoncus sed ante ut efficitur. Ut pellentesque ultricies ultricies. Sed venenatis urna a venenatis tristique. Sed tincidunt fermentum accumsan. Vestibulum scelerisque tincidunt nisl quis eleifend. Aliquam nunc leo, convallis et blandit id, tempor vel dolor. Nam sed ullamcorper lectus, a tempor mauris. Proin nec condimentum dolor, porta aliquet arcu. Fusce accumsan, tortor a sollicitudin maximus, purus sem malesuada magna, ut dapibus sapien nunc et erat. Duis elit nulla, tempor vitae ullamcorper ut, consectetur ut eros. Curabitur dignissim risus quis est aliquam, ac malesuada orci rutrum. Mauris euismod in mauris at blandit. Aliquam porttitor, diam fringilla convallis convallis, elit nibh euismod mauris, eget gravida erat lorem sed leo. Vivamus imperdiet turpis eu cursus congue. Duis rutrum in lorem nec tempus. Phasellus porttitor placerat fermentum. Sed varius semper commodo. Nam in massa viverra, mollis ipsum in, sollicitudin dui. Fusce ultricies, quam ut luctus scelerisque, magna dui fringilla dolor, ac luctus augue magna lobortis est. Praesent neque est, fermentum in magna non, mattis rhoncus sem. Aenean quis lorem vel leo dictum viverra. Curabitur sit amet feugiat purus.",
+                data: "69.69.2137",
+                zobacz: "Zobacz",
+            },
+            {
+                idn: "new2",
+                img: "img/nowosc2.jpg",
+                name: "COS",
+                opis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at ipsum suscipit eros venenatis finibus. Phasellus et leo sed nisi placerat varius. Quisque vitae convallis lacus. Phasellus ac sem ligula. Phasellus posuere, elit nec luctus blandit, dui nunc volutpat nulla, ut feugiat massa nisl vitae orci. Aliquam porttitor vel neque sed tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam sodales pretium consequat. Vestibulum vel condimentum lacus, eget ultrices felis. Mauris et odio at turpis placerat placerat. Vestibulum sit amet purus erat. Phasellus molestie, arcu id vestibulum convallis, arcu metus consequat turpis, vitae tempus lacus tellus quis elit. Maecenas consequat sapien quis lectus euismod, quis bibendum dui tempor. Aliquam et sem ultrices, aliquet massa et, congue purus. Pellentesque ante tellus, malesuada tincidunt elit eget, blandit vehicula urna. Nulla ornare interdum arcu, id maximus elit consequat sed. Nulla sed ante mattis, aliquam dui sed, congue justo. Cras rhoncus malesuada erat, quis tincidunt mauris elementum cursus. Proin non convallis leo, eu congue arcu. Nulla facilisi. Integer ultricies quis massa efficitur pellentesque. Suspendisse potenti. Aenean rhoncus sed ante ut efficitur. Ut pellentesque ultricies ultricies. Sed venenatis urna a venenatis tristique. Sed tincidunt fermentum accumsan. Vestibulum scelerisque tincidunt nisl quis eleifend. Aliquam nunc leo, convallis et blandit id, tempor vel dolor. Nam sed ullamcorper lectus, a tempor mauris. Proin nec condimentum dolor, porta aliquet arcu. Fusce accumsan, tortor a sollicitudin maximus, purus sem malesuada magna, ut dapibus sapien nunc et erat. Duis elit nulla, tempor vitae ullamcorper ut, consectetur ut eros. Curabitur dignissim risus quis est aliquam, ac malesuada orci rutrum. Mauris euismod in mauris at blandit. Aliquam porttitor, diam fringilla convallis convallis, elit nibh euismod mauris, eget gravida erat lorem sed leo. Vivamus imperdiet turpis eu cursus congue. Duis rutrum in lorem nec tempus. Phasellus porttitor placerat fermentum. Sed varius semper commodo. Nam in massa viverra, mollis ipsum in, sollicitudin dui. Fusce ultricies, quam ut luctus scelerisque, magna dui fringilla dolor, ac luctus augue magna lobortis est. Praesent neque est, fermentum in magna non, mattis rhoncus sem. Aenean quis lorem vel leo dictum viverra. Curabitur sit amet feugiat purus.",
+                data: "69.69.2137",
+                zobacz: "Zobacz",
+            },
+        ];
+
+        for(let j = 0; j < nowosc.length; j++){
+            let idn = nowosc[j].idn;
+            let img = nowosc[j].img;
+            let name = nowosc[j].name;
+            let opis = nowosc[j].opis;
+            let data = nowosc[j].data;
+            let zobacz = nowosc[j].zobacz;
+
+            let nowo = document.createElement("div");
+            let nowol = document.createElement("div");
+            let nowor = document.createElement("div");
+            let title = document.createElement("div");
+            let des = document.createElement("div");
+            let date = document.createElement("div");
+            let imgn = document.createElement("img");
+            let h1_name = document.createElement("h1");
+            let p_des = document.createElement("p");
+            let h2_date = document.createElement("h2");
+            let up = document.createElement("div");
+            let down = document.createElement("div");
+            let a_zobacz = document.createElement("div");
+            let a = document.createElement("a");
+
+
+            nowo.classList.add("nowo");
+            nowol.classList.add("nowol");
+            nowor.classList.add("nowor");
+            title.classList.add("title");
+            des.classList.add("des");
+            date.classList.add("date");
+            up.classList.add("up");
+            down.classList.add("down");
+            a_zobacz.classList.add("a_zobacz")
+            a.classList.add("a");
+
+            a.setAttribute("href", "nowosci/" + idn + ".html");
+
+            imgn.src = img;
+            h1_name.innerText = name;
+            p_des.innerText = opis;
+            h2_date.innerText = data;
+            a.innerText = zobacz;
+
+            document.getElementById("newsy").appendChild(nowo).appendChild(nowol).appendChild(imgn)
+
+            document.getElementById("newsy").appendChild(nowo).appendChild(nowor).appendChild(up).appendChild(title).appendChild(h1_name)
+            document.getElementById("newsy").appendChild(nowo).appendChild(nowor).appendChild(up).appendChild(des).appendChild(p_des)
+
+            document.getElementById("newsy").appendChild(nowo).appendChild(nowor).appendChild(down).appendChild(date).appendChild(h2_date)
+            document.getElementById("newsy").appendChild(nowo).appendChild(nowor).appendChild(down).appendChild(a_zobacz).appendChild(a)
+        }
+     }
+     nowosc()
     </script>
 </body>
 </html>

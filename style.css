@@ -175,6 +175,71 @@ label{
 #toggle{
     display:none;
 }
+.News{
+    display: block;
+}
+#newsy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nowo{
+    display: flex;
+    width: 80%;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.nowol{
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+.nowol img{
+    width: 100%;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.nowor{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: 10px;
+    justify-content: space-between;
+}
+.nowor h1{
+    margin: 0px;
+}
+.nowor h2{
+    margin: 0px;
+    font-size: 15px;
+    color: gray;
+    font-weight: normal;
+}
+.up{
+    padding: 10px;
+}
+.up p{
+    overflow-y: scroll;
+    max-height: 190px;
+    margin: 0px;
+}
+.down{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.down a{
+    background-color: aqua;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
 
 @media only screen and (max-width:500px){
     label{
@@ -276,6 +341,13 @@ label{
     .info img{
         margin: 5px;
     }
+    .nowo{
+        display: flex;
+        flex-direction: column;
+    }
+    .nowol, .nowor{
+        width: 100%;
+    }
 }
 
 
@@ -302,5 +374,17 @@ label{
         flex-direction: column;
         height: 200px;
         font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width:2000px){
+    .up{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .up p{
+        max-height: 260px;
     }
 }
