@@ -222,7 +222,7 @@ label{
     padding: 10px;
 }
 .up p{
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 190px;
     margin: 0px;
 }
