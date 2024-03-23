@@ -3,15 +3,17 @@ body{
     margin: 0;
     padding: 0;
     font-family: Source Code Pro;
+    background-color: lightgray;
 }
 header{
+    background-color: black;
     width: 100%;
 }
 .logo{
     height: 90px;
 }
 .logo img{
-    width: 100%;
+    width: 99%;
     padding: 0px;
     margin: 0px;
     transition: 2.5s;
@@ -77,7 +79,7 @@ header a{
 }
 .Offerts .car{
     width: 400px;
-    background-color: lightgray;
+    background-color: white;
     border-radius: 10px;
 }
 .info img{
@@ -141,6 +143,7 @@ footer ul{
     font-size: 20px;
     display: flex;
     margin-right: 20px;
+    color: white;
 }
 #zegar div{
     display: flex;
@@ -151,17 +154,46 @@ footer ul{
     display: flex;
     align-items: center;
 }
-.menu a:hover{
-    text-decoration: underline;
+.menu a{
+	border: none;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	outline: none;
+	overflow: hidden;
+	position: relative;
+	font-weight: 600;
+	font-size: 15px;
+	padding: 10px 20px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.menu a span{
+	position: relative;
+	z-index: 1;
+}
+.menu a:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 490%;
+	width: 140%;
+	background: yellow;
+	transition: all 0.5s ease-in-out;
+	transform: translateX(-15%) translateY(-85%) rotate(45deg);
+}
+.menu a:hover:after {
+	transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
 .menu{
+    display: flex;
     margin:0px 30px 0px 0px;
-    }
+}
 .menu a{
     clear:right;
     text-decoration:none;  
     color: grey;
-    margin:0px 10px;
     line-height:70px;
 }
 label{
@@ -187,7 +219,7 @@ label{
 .nowo{
     display: flex;
     width: 80%;
-    background-color: lightgray;
+    background-color: white;
     border-radius: 10px;
     margin-bottom: 50px;
 }
@@ -233,15 +265,18 @@ label{
     margin-bottom: 5px;
 }
 .down a{
-    background-color: aqua;
+    background-color: black;
     text-decoration: none;
-    color: black;
+    color: yellow;
     padding: 10px;
     font-weight: bold;
     border-radius: 5px;
 }
 
 @media only screen and (max-width:500px){
+    header{
+        background-color: white;
+    }
     label{
         display:block;
         cursor:pointer;
@@ -263,8 +298,49 @@ label{
     #toggle:checked+.menu{
         display:block;
     }
+    .menu a {
+        border: none;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        color: gray;
+        font-weight: 600;
+        font-size: 15px;
+        background-color: #222;
+        padding: 17px 40px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .menu a span {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .menu a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 490%;
+        width: 140%;
+        background: yellow;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+        transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    }
+    
+    .menu a:hover:after {
+        -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+        transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    }
     .meny{
     width: 100%;
+    background-color: lightgray;
     }
   #cars{
     display: flex;
