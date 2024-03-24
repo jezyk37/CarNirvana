@@ -7,7 +7,7 @@
     <title>CarNirvana</title>
 </head>
 <body>
-    <header>
+    <header class="naglowek">
         <ul>
             <div class="logo"><a href="index.html"><img src="img/CarNirvana.png"></a></div>
             <div class="meny">
@@ -28,22 +28,10 @@
             </div>
         </ul>
     </header>
+
     <section class="About">
-        <div class="background"></div>
-        <p>
-            Witaj w CarNirvana - twoim przyjaznym przystanku w świecie motoryzacji!<br>
-            
-            CarNirvana powstało z pasji do samochodów i dążenia do stworzenia miejsca, które zapewni Ci kompleksową, zaufaną i satysfakcjonującą obsługę w każdym aspekcie Twojej przygody z motoryzacją.<br>
-            
-            Nasza firma zrodziła się z marzeń o stworzeniu przestrzeni, gdzie pasja do samochodów łączy się z profesjonalizmem oraz troską o naszych klientów. Od momentu założenia wkładamy ogromny wysiłek, aby dostarczyć Ci nie tylko wysokiej jakości pojazdy, ale również kompleksowe wsparcie, doradztwo i usługi serwisowe.<br>
-            
-            W CarNirvana stawiamy na transparentność, uczciwość i doskonałą obsługę klienta. Nasz zespół składa się z doświadczonych ekspertów, którzy służą Ci pomocą na każdym etapie Twojej podróży z naszą firmą.<br>
-            
-            Niezależnie od tego, czy szukasz nowego samochodu, planujesz sprzedać swój obecny pojazd, czy też potrzebujesz wsparcia serwisowego, CarNirvana jest tutaj, aby Ci pomóc. Naszym celem jest sprawić, aby Twoje doświadczenie z nami było nie tylko wyjątkowe, ale również bezproblemowe i satysfakcjonujące.<br>
-            
-            Dołącz do naszej społeczności i pozwól nam być Twoim przewodnikiem w fascynującym świecie motoryzacji!<br>
-            
-            Zespół CarNirvana</p>
+        
+        
     </section>
 
     <section class="Offerts">
@@ -58,14 +46,11 @@
 
         </div>
     </section>
-    <footer>
-        <ul>
-            <li>E-mail: CarNirvana@gmail.com</li>
-            <li>Numer telefonu: 021 069 037</li>
-            <li>Lokalizacja: CarNirvanowa 69</li>
-            <li>CarNirvana</li>
-        </ul>
+
+    <footer class="stopka">
+        
     </footer>
+
     <script>
         function updateClock(){
             var now = new Date();
@@ -89,6 +74,44 @@
         setInterval(updateClock, 1000)
         
         updateClock();
+
+        function onas(){
+            let about = [
+                {
+                    onas_tekst: "Witaj w CarNirvana - twoim przyjaznym przystanku w świecie motoryzacji! CarNirvana powstało z pasji do samochodów i dążenia do stworzenia miejsca, które zapewni Ci kompleksową, zaufaną i satysfakcjonującą obsługę w każdym aspekcie Twojej przygody z motoryzacją. Nasza firma zrodziła się z marzeń o stworzeniu przestrzeni, gdzie pasja do samochodów łączy się z profesjonalizmem oraz troską o naszych klientów.",
+                    onas_tekst2: "Od momentu założenia wkładamy ogromny wysiłek, aby dostarczyć Ci nie tylko wysokiej jakości pojazdy, ale również kompleksowe wsparcie, doradztwo i usługi serwisowe. W CarNirvana stawiamy na transparentność, uczciwość i doskonałą obsługę klienta. Nasz zespół składa się z doświadczonych ekspertów, którzy służą Ci pomocą na każdym etapie Twojej podróży z naszą firmą.",
+                    onas_tekst3: "Niezależnie od tego, czy szukasz nowego samochodu, planujesz sprzedać swój obecny pojazd, czy też potrzebujesz wsparcia serwisowego, CarNirvana jest tutaj, aby Ci pomóc. Naszym celem jest sprawić, aby Twoje doświadczenie z nami było nie tylko wyjątkowe, ale również bezproblemowe i satysfakcjonuj. ",
+                    onas_tekst4: "Dołącz do naszej społeczności i pozwól nam być Twoim przewodnikiem w fascynującym świecie motoryzacji.",
+                    podpis: "Zespół CarNirvana.",
+                
+                }
+                
+            ]
+
+            let onas = document.querySelector(".About");
+            for(let i = 0; i<about.length;i++){
+                onas.innerHTML = `
+                <div class="background"></div>
+                <p>
+                    ${about[i].onas_tekst}
+                    <br>
+                    ${about[i].onas_tekst2}
+                    <br>
+                    ${about[i].onas_tekst3}
+                    <br>
+                    ${about[i].onas_tekst4}
+                    <br>
+                    ${about[i].podpis}
+                </p>
+                
+                
+                `
+            }
+        
+        
+        }
+        onas()
+      
 
         function oferta(){
         let oferta = [
@@ -268,6 +291,36 @@
         }
      }
      nowosc()
+
+     function footer(){
+        let stopka = [
+                {
+                    stopka1: "E-mail: CarNirvana@gmail.com",
+                    stopka2: "Numer telefonu: 021 069 037",
+                    stopka3: "Lokalizacja: CarNirvanowa 69",
+                    stopka4: "CarNirvana",
+                
+                }
+                
+            ]
+
+            let footer = document.querySelector(".stopka");
+            for(let i = 0; i<stopka.length;i++){
+
+                footer.innerHTML = `
+                
+                <ul>
+                    <li>${stopka[i].stopka1}</li>
+                    <li>${stopka[i].stopka2}</li>
+                    <li>${stopka[i].stopka3}</li>
+                    <li>${stopka[i].stopka4}</li>
+                </ul>
+
+                `
+            }
+        
+     }
+     footer();
     </script>
 </body>
 </html>
