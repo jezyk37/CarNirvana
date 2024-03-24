@@ -5,15 +5,14 @@ body{
     background-color: rgb(240, 240, 240);
 }
 header{
+    background-color: black;
     width: 100%;
-    border-bottom: gray 1px solid;
-    margin-bottom: 10px;
 }
 .logo{
     height: 90px;
 }
 .logo img{
-    width: 100%;
+    width: 99%;
     padding: 0px;
     margin: 0px;
     transition: 2.5s;
@@ -42,6 +41,7 @@ header a{
 #zegar{
     font-size: 20px;
     display: flex;
+    color: white;
     margin-right: 20px;
 }
 #zegar div{
@@ -53,17 +53,46 @@ header a{
     display: flex;
     align-items: center;
 }
-.menu a:hover{
-    text-decoration: underline;
+.menu a{
+	border: none;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	outline: none;
+	overflow: hidden;
+	position: relative;
+	font-weight: 600;
+	font-size: 15px;
+	padding: 10px 20px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.menu a span{
+	position: relative;
+	z-index: 1;
+}
+.menu a:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 490%;
+	width: 140%;
+	background: yellow;
+	transition: all 0.5s ease-in-out;
+	transform: translateX(-15%) translateY(-85%) rotate(45deg);
+}
+.menu a:hover:after {
+	transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
 .menu{
+    display: flex;
     margin:0px 30px 0px 0px;
-    }
+}
 .menu a{
     clear:right;
     text-decoration:none;  
     color: grey;
-    margin:0px 10px;
     line-height:70px;
 }
 label{
@@ -138,7 +167,6 @@ box-shadow: 0px 0px 8px -2px rgb(24, 24, 24);
 footer{
     background-color: black;
     width: 100%;
-    margin-top: 101px;
 }
 footer li{
     list-style: none;
@@ -153,6 +181,9 @@ footer ul{
     height: 50px;
 }
 @media only screen and (max-width:500px){
+    header{
+        background-color: white;
+    }
     label{
         display:block;
         cursor:pointer;
@@ -173,6 +204,46 @@ footer ul{
     }
     #toggle:checked+.menu{
         display:block;
+    }
+    .menu a {
+        border: none;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        color: gray;
+        font-weight: 600;
+        font-size: 15px;
+        background-color: #222;
+        padding: 17px 40px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .menu a span {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .menu a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 490%;
+        width: 140%;
+        background: yellow;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+        transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    }
+    
+    .menu a:hover:after {
+        -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+        transform: translateX(-9%) translateY(-25%) rotate(45deg);
     }
     .meny{
     width: 100%;
@@ -207,4 +278,20 @@ footer ul{
       header label{
         margin: 0px;
       }
+      footer ul{
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+      }
+      footer li{
+        font-size: 15px;
+      }
+}
+@media only screen and (max-width:800px){
+    footer ul{
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        font-size: 20px;
+    }
 }
