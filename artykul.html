@@ -7,18 +7,27 @@
   <script src="script.js"></script>
 </head>
 <body> 
-  <div class="nav">
-    <div class="img"><a href="#"><img src="CarNirvana.png"></a></div>
-    <label for="toggle">&#9776;</label>
-    <input type="checkbox" id="toggle"/>
-    <div class="menu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Agent</a>
-      <a href="#">Blog</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
+  <header>
+    <ul>
+        <div class="logo"><a href="index.html"><img src="CarNirvana.png"></a></div>
+        <div class="meny">
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle"/>
+            <div class="menu">
+            <a href="#"><span>Home</span></a>
+            <a href="#"><span>About</span></a>
+            <a href="#"><span>Agent</span></a>
+            <a href="#"><span>Blog</span></a>
+            <a href="#"><span>Contact</span></a>
+            </div>
+        </div>
+        <div id="zegar">
+            <div id="hours"></div>
+            <div id="minutes"></div>
+            <div id="seconds"></div>
+        </div>
+    </ul>
+</header>
   <a href="podstrona.html"><h1>Powrót do Aktualności</h1></a>
     <section class="content">
         <articlepod>
@@ -50,12 +59,36 @@
  
     </section>
     <footer>
-        <ul>
-            <li>Aleksander Noszczyk</li>
-            <li>Jakub Nikiel</li>
-            <li>Jakub Molińśki</li>
-            <li>Patryk Sojka</li>
-        </ul>
-    </footer>
+      <ul>
+          <li>E-mail: CarNirvana@gmail.com</li>
+          <li>Numer telefonu: 021 069 037</li>
+          <li>Lokalizacja: CarNirvanowa 69</li>
+          <li>CarNirvana</li>
+      </ul>
+  </footer>
+  <script>
+    function updateClock(){
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        
+        if(hours < 10){
+            hours = "0" + hours;
+        } 
+        else{
+            hours = hours;
+        }
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        seconds = (seconds < 10) ? "0" + seconds : seconds;
+        
+        document.getElementById("hours").textContent = hours + ":";
+        document.getElementById("minutes").textContent = minutes + ":";
+        document.getElementById("seconds").textContent = seconds;
+    }
+    setInterval(updateClock, 1000)
+    
+    updateClock();
+</script>
 </body>
 </html>
