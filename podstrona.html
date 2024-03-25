@@ -73,7 +73,7 @@
                     tytul: "Nowe modele elektryczne w ofercie!",
                     podtytul: "Elektryczna rewolucja w CarNirvana.",
                     Krotki_opis: "Zapraszamy do zapoznania się z najnowszymi elektrycznymi modelami samochodów dostępnymi w naszym komisie. Znajdź swój idealny pojazd już dziś!",
-                    Data_wpisu: "17.03.2024.",
+                    Data_wpisu: "17.03.2024",
                 
                 },
                 {
@@ -82,7 +82,7 @@
                     tytul: "Wyprzedaż końca sezonu – rabaty do 30%!",
                     podtytul: "Ostatnia szansa na zakupy z rabatem.",
                     Krotki_opis: "Nie przegap wyjątkowej okazji! Tylko teraz rabaty do 30% na wybrane modele samochodów w naszym komisie. Śpiesz się – oferta ważna do wyczerpania zapasów!",
-                    Data_wpisu: "13.03.2024.",
+                    Data_wpisu: "13.03.2024",
                 },
                 {
                     url: "auto_art3.jpg",
@@ -90,7 +90,7 @@
                     tytul: "Serwis gwarancyjny dla naszych klientów!",
                     podtytul: "Bezpieczeństwo i spokój na długie lata.",
                     Krotki_opis: "Z dumą ogłaszamy wprowadzenie nowego programu serwisowego dla naszych klientów. Zapewniamy kompleksową opiekę nad Twoim samochodem po jego zakupie.",
-                    Data_wpisu: "11.03.2024.",
+                    Data_wpisu: "11.03.2024",
                 
                 }
                 
@@ -102,11 +102,13 @@
                 sigma.innerHTML = `
                 <a href="${article[i].a}">
                         <img src="${article[i].url}">
-                        <div class="info">
-                            <h1>${article[i].tytul}</h1> 
-                            <h2>${article[i].podtytul}</h2>    
-                            <p>${article[i].Krotki_opis}</p>
-                            <p>${article[i].Data_wpisu}</p>           
+                            <div class="info">
+                                <div class="od">
+                                    <h1>${article[i].tytul}</h1> 
+                                    <h2>${article[i].podtytul}</h2>    
+                                    <p>${article[i].Krotki_opis}</p>
+                                </div>
+                            <p class="data">${article[i].Data_wpisu}</p>
                         </div>
                     </a>
                 `;

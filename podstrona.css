@@ -1,12 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 body, html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-a{
-  text-decoration: none;
-  color: black;
+    font-family: Source Code Pro;
 }
 header{
   background-color: black;
@@ -126,56 +124,89 @@ footer ul{
   display: flex;
   align-items: center;
 }
-
-.content img{
-    width: auto;
-    height: 75%;
-    border: 4px solid rgb(233, 228, 228);
+.content h2{
+  text-align: center;
+  font-size: 50px;
 }
-.info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 40%;
-    height: 70%;
-    background-color: rgb(243, 239, 239);
-    padding: 20px;
+a{
+  color: black;
+  text-decoration: none;
 }
-
-.info h1{
-    font-size: 3rem;
+a:hover{
+  color: magenta;
 }
-.info h2{
-    font-size: 2rem;
+article img{
+  width: 25%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
-.info p{
-    font-size: 1rem;
+article .info{
+  width: 50%;
 }
-
+article a{
+  display: flex;
+  margin-bottom: 50px;
+  width: 90%;
+  background-color: #ffdf00;
+  padding: 5px;
+  border-radius: 10px;
+  border: grey 1px solid;
+}
 article{
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  height: 70vh;
-
 }
-
-articlepod{
+.info h1{
+  font-size: 30px;
+}
+.info h2{
+  font-size: 20px;
+  text-align: unset;
+}
+.info{
+  margin: 10px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
-.wiad{
-  width: 100%;
+.info .data{
+  color: grey;
+}
+article2{
   display: flex;
   justify-content: center;
 }
-
-.wiad h2{
+.akt{
   width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: black;
+  border-radius: 20px;
+  color: whitesmoke;
+  padding: 10px;
+}
+.wiad h2{
+  font-size: 25px;
+}
+.imgg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.akt img{
+  width: 50%;
+  border: #ffdf00 2px solid;
+}
+.info2{
+  color: gray;
+  font-size: 20px;
+}
+.info2 h2{
+  text-align: unset;
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -185,6 +216,22 @@ articlepod{
 label{
     display:block;
     cursor:pointer;
+}
+article a{
+  display: flex;
+  flex-direction: column;
+}
+.od{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200%;
+}
+.od h1{
+  font-size: 20px;
+}
+.od h2{
+  font-size: 15px;
 }
 .menu{
     margin-top: 90px;
@@ -199,6 +246,7 @@ label{
     border:1px solid grey;
     margin:0px;
     width: 100%;
+    padding: 0px;
 }
 #toggle:checked+.menu{
     display:block;
@@ -216,7 +264,6 @@ label{
     font-weight: 600;
     font-size: 15px;
     background-color: #222;
-    padding: 17px 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -238,7 +285,15 @@ label{
     -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
     transform: translateX(-98%) translateY(-25%) rotate(45deg);
 }
-
+.wiad h2{
+  font-size: 15px;
+}
+.info2{
+  font-size: 15px;
+}
+.info2 h2{
+  font-size: 15px;
+}
 .menu a:hover:after {
     -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
     transform: translateX(-9%) translateY(-25%) rotate(45deg);
@@ -309,10 +364,6 @@ header{
       justify-content: center;
     }
   
-    .info h1, .info h2 {
-      font-size: 1.5rem;
-    }
-  
     .info p {
       font-size: 0.8rem;
     }
@@ -323,24 +374,10 @@ header{
       font-size: 20px;
   }
   }
-  html,body{
-    margin:0;
-    padding:0;
-    height:100%;
-    font-family:"helvetica",sans-serif;
-   }
-.nav{
-  border-bottom:1px solid #EAEEEB;
-  text-align:right;
-  height:70px;
-  padding: 10px;
-  line-height:70px;
-  }
 .menu{
 margin:0px 30px 0px 0px;
 
 }
-
 .menu a{
   clear:right;
   text-decoration:none;
@@ -379,18 +416,8 @@ label{
   }
   
   #toggle:checked+.menu{
-    display:block;
-  }
-
-  articlepod {
+    display:flex;
     flex-direction: column;
-    align-items: center;
-    height: auto;
+    margin-top: 90px;
   }
-}
-.img img{
-    height: 70px;
-    width: auto;
-    float: left;
-    cursor: pointer;
 }

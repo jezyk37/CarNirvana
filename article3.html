@@ -78,19 +78,22 @@
         for(let i = 0; i<article.length;i++){
 
             artykul.innerHTML = `
-            <articlepod>
-                <img src="${article[i].url}">
-                <div class="info">
-                    <h1>${article[i].tytul}</h1> 
-                    <h2>${article[i].Data_wpisu}</h2>    
-                    <p>${article[i].kto}</p>
-                </div>
-            </articlepod>                  
-                <div class="wiad">
-                    <h2>
-                        ${article[i].opis}
-                    </h2>
-                </div>
+            <article2>
+                    <div class="akt">
+                        <div class="imgg">
+                            <img src="${article[i].url}">
+                        </div>
+                        <div class="wiad">
+                            <h2>
+                                ${article[i].opis}
+                            </h2>
+                        </div>
+                        <div class="info2">
+                            <p>${article[i].Data_wpisu}</p>    
+                            <h2>${article[i].kto}</h2>
+                        </div>
+                    </div>
+                </article2>
             `;
         }
     
