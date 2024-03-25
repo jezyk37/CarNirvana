@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleoferty.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <div class="logo"><a href="index.html"><img src="img/CarNirvana.png"></a></div>
+            <div class="meny">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle"/>
+                <div class="menu">
+                <a href="#"><span>Home</span></a>
+                <a href="#"><span>About</span></a>
+                <a href="#"><span>Agent</span></a>
+                <a href="#"><span>Blog</span></a>
+                <a href="#"><span>Contact</span></a>
+                </div>
+            </div>
+            <div id="zegar">
+                <div id="hours"></div>
+                <div id="minutes"></div>
+                <div id="seconds"></div>
+            </div>
+        </ul>
+    </header>
+    <section class="sectionpodstronaart">
+        
+    </section>
+    <footer class="stopka">
+
+    </footer>
+</body>
+</html>
+
+<script>
+     function oferta(){
+    
+
+            let oferta = [
+                {
+                    url: "auto_oferta2.jpg",
+                    Nazwa: "Mercedes-AMG Black Series",
+                    Paliwo: "Benzyna",
+                    Skrzynia_biegów: "Automatyczna",
+                    Rok_produkcji: 2018,
+                    Przejazd: "Potężne osiągi i luksusowa elegancja – to tylko niektóre z cech, które oferuje Mercedes-AMG Black Series, zapewniając niesamowite doznania z jazdy na każdym kilometrze.",
+                    Cena: "20 000 000zł",
+                    Opis: "Mercedes-AMG Black Series to prawdziwa bestia na drodze, łącząca w sobie doskonałe osiągi z wyrafinowanym stylem. Ten model z 2018 roku to kwintesencja luksusu i szybkości, zbudowana z myślą o najbardziej wymagających kierowcach. Wyposażony w potężny silnik V8 o mocy ponad 600 koni mechanicznych, ten samochód przyspiesza od 0 do 100 km/h w mgnieniu oka, pozostawiając konkurencję daleko w tyle. Wnętrze urzeka wysoką jakością materiałów i zaawansowanymi technologiami, zapewniając kierowcy i pasażerom komfort na najwyższym poziomie. Mercedes-AMG Black Series to nie tylko samochód – to prawdziwe dzieło sztuki inżynierskiej, które wzbudza podziw i respekt na każdym kroku.",
+
+                
+                }
+            ]
+
+            let singleProduct = document.querySelector(".sectionpodstronaart");
+            for(let i = 0; i<oferta.length; i++){
+                let newProduct = document.createElement("article")
+                newProduct.innerHTML = `
+                <div class="sectionpodstronaart2">
+                    <div class="toppodstronaart">
+                        <div class="zdjęciaart">
+                            <div id="zdjęcie">
+                                <img src="${oferta[i].url}">
+                            </div>
+                        </div>
+                    
+                        <div class="opispodstronaart">
+                            <div class="informationsart">
+                                <div id="tytul">
+                                    <h1 style="font-size: 40px;">${oferta[i].Nazwa}</h1>
+                                </div>
+                                <div id="opis_div">
+                                    <ul id="lista" style="font-size: 20px;">
+                                        <li>Rok: ${oferta[i].Rok_produkcji}</li>
+                                        <li>Paliwo: ${oferta[i].Paliwo}</li>
+                                        <li>Biegi: ${oferta[i].Skrzynia_biegów}</li>
+                                    </ul>
+
+                                    <p style="font-size: 20px;" >${oferta[i].Przejazd}</p>
+
+                                    <p id="opis" style="font-size: 20px;">
+                                        ${oferta[i].Opis}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottompodstronaart">
+                    <div class="buy">
+                        <button class="kup">
+                            Kup
+                        </button>
+                        <h2 class="cenapodstronaart" id="cena">
+                            Cena: ${oferta[i].Cena}
+                        </h2>
+                    </div>
+                </div>
+                `;
+                singleProduct.appendChild(newProduct);            
+            }
+
+     }
+     oferta()
+
+     function updateClock(){
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            
+            if(hours < 10){
+                hours = "0" + hours;
+            } 
+            else{
+                hours = hours;
+            }
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+            
+            document.getElementById("hours").textContent = hours + ":";
+            document.getElementById("minutes").textContent = minutes + ":";
+            document.getElementById("seconds").textContent = seconds;
+        }
+        setInterval(updateClock, 1000)
+        
+        updateClock();
+
+        function footer(){
+        let stopka = [
+                {
+                    stopka1: "E-mail: CarNirvana@gmail.com",
+                    stopka2: "Numer telefonu: 021 069 037",
+                    stopka3: "Lokalizacja: CarNirvanowa 69",
+                    stopka4: "CarNirvana",
+                
+                }
+                
+            ]
+
+            let footer = document.querySelector(".stopka");
+            for(let i = 0; i<stopka.length;i++){
+
+                footer.innerHTML = `
+                
+                <ul>
+                    <li>${stopka[i].stopka1}</li>
+                    <li>${stopka[i].stopka2}</li>
+                    <li>${stopka[i].stopka3}</li>
+                    <li>${stopka[i].stopka4}</li>
+                </ul>
+
+                `
+            }
+        
+     }
+     footer();
+
+</script>

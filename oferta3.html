@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleoferty.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <div class="logo"><a href="index.html"><img src="img/CarNirvana.png"></a></div>
+            <div class="meny">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle"/>
+                <div class="menu">
+                <a href="#"><span>Home</span></a>
+                <a href="#"><span>About</span></a>
+                <a href="#"><span>Agent</span></a>
+                <a href="#"><span>Blog</span></a>
+                <a href="#"><span>Contact</span></a>
+                </div>
+            </div>
+            <div id="zegar">
+                <div id="hours"></div>
+                <div id="minutes"></div>
+                <div id="seconds"></div>
+            </div>
+        </ul>
+    </header>
+    <section class="sectionpodstronaart">
+        
+    </section>
+    <footer class="stopka">
+
+    </footer>
+</body>
+</html>
+
+<script>
+     function oferta(){
+
+            let oferta = [
+                {
+                    url: "auto_oferta3.jpg",
+                    Nazwa: "Ford Transit 350",
+                    Paliwo: "Diesel",
+                    Skrzynia_biegów: "Manualna",
+                    Rok_produkcji: 2010,
+                    Przejazd: "Solidność i wszechstronność – to główne cechy, które charakteryzują Forda Transita 350, idealnego towarzysza każdej podróży biznesowej czy rodzinnej.",
+                    Cena: "20 000zł",
+                    Opis: "Ford Transit 350 to niezawodny partner do każdego rodzaju transportu. Ten model z 2010 roku oferuje nie tylko solidną konstrukcję i wydajny silnik Diesla, ale także przestronne wnętrze, które pomieści wszystko, czego potrzebujesz. Doskonała manewrowość i łatwość prowadzenia sprawiają, że Ford Transit 350 świetnie radzi sobie zarówno na mieście, jak i na dłuższych trasach. Bogate wyposażenie oraz liczne udogodnienia, takie jak klimatyzacja czy system audio, zapewniają komfortową podróż zarówno dla kierowcy, jak i pasażerów. Ford Transit 350 to nie tylko samochód dostawczy – to mobilne centrum pracy i rozrywki, które sprawi, że każda podróż będzie przyjemnością.",
+
+                
+                }
+            ]
+
+            let singleProduct = document.querySelector(".sectionpodstronaart");
+            for(let i = 0; i<oferta.length; i++){
+                let newProduct = document.createElement("article")
+                newProduct.innerHTML = `
+                <div class="sectionpodstronaart2">
+                    <div class="toppodstronaart">
+                        <div class="zdjęciaart">
+                            <div id="zdjęcie">
+                                <img src="${oferta[i].url}">
+                            </div>
+                        </div>
+                    
+                        <div class="opispodstronaart">
+                            <div class="informationsart">
+                                <div id="tytul">
+                                    <h1 style="font-size: 40px;">${oferta[i].Nazwa}</h1>
+                                </div>
+                                <div id="opis_div">
+                                    <ul id="lista" style="font-size: 20px;">
+                                        <li>Rok: ${oferta[i].Rok_produkcji}</li>
+                                        <li>Paliwo: ${oferta[i].Paliwo}</li>
+                                        <li>Biegi: ${oferta[i].Skrzynia_biegów}</li>
+                                    </ul>
+
+                                    <p style="font-size: 20px;" >${oferta[i].Przejazd}</p>
+
+                                    <p id="opis" style="font-size: 20px;">
+                                        ${oferta[i].Opis}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottompodstronaart">
+                    <div class="buy">
+                        <button class="kup">
+                            Kup
+                        </button>
+                        <h2 class="cenapodstronaart" id="cena">
+                            Cena: ${oferta[i].Cena}
+                        </h2>
+                    </div>
+                </div>
+                `;
+                singleProduct.appendChild(newProduct);            
+            }
+
+     }
+     oferta()
+
+     function updateClock(){
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            
+            if(hours < 10){
+                hours = "0" + hours;
+            } 
+            else{
+                hours = hours;
+            }
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+            
+            document.getElementById("hours").textContent = hours + ":";
+            document.getElementById("minutes").textContent = minutes + ":";
+            document.getElementById("seconds").textContent = seconds;
+        }
+        setInterval(updateClock, 1000)
+        
+        updateClock();
+
+        function footer(){
+        let stopka = [
+                {
+                    stopka1: "E-mail: CarNirvana@gmail.com",
+                    stopka2: "Numer telefonu: 021 069 037",
+                    stopka3: "Lokalizacja: CarNirvanowa 69",
+                    stopka4: "CarNirvana",
+                
+                }
+                
+            ]
+
+            let footer = document.querySelector(".stopka");
+            for(let i = 0; i<stopka.length;i++){
+
+                footer.innerHTML = `
+                
+                <ul>
+                    <li>${stopka[i].stopka1}</li>
+                    <li>${stopka[i].stopka2}</li>
+                    <li>${stopka[i].stopka3}</li>
+                    <li>${stopka[i].stopka4}</li>
+                </ul>
+
+                `
+            }
+        
+     }
+     footer();
+
+</script>
