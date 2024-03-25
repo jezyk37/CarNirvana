@@ -30,42 +30,12 @@
 </header>
   <a href="podstrona.html"><h1>Powrót do Aktualności</h1></a>
     <section class="content">
-        <articlepod>
-        <img src="https://ocdn.eu/pulscms-transforms/1/gaYk9kqTURBXy85ODIxMGQwNDI1MTljM2YyZTc5ODY2M2RhMDMzYzhkMC5qcGVnk5UDAC3NAszNAZKTBc0BaM0B9JMFzQFozQH03gACoTAFoTEA"  alt="">
-        <div class="info">
-            <h1>Wpływ Księżyca na Seksulany rozwój truskawek</h1> 
-            <h2>21.03.2022</h2>    
-            <p>Wielce Miłościwy Pan Cytrynka</p>
-        </div>
-        </articlepod>                  
-         <div class="wiad">
-             <h2>Amerykańscy naukowcy ogłosili niedawno odkrycie, które może zmienić sposób, w jaki postrzegamy oddziaływanie natury na rozwój roślin. Badania przeprowadzone przez zespół z Uniwersytetu Kalifornijskiego w Davis wykazały, że fazy Księżyca mają zaskakujący wpływ na seksualny rozwój truskawek.
-
-                Dotychczasowe badania nad wpływem Księżyca na rośliny skupiały się głównie na procesach wzrostu i rozwoju, a nie na ich życiu reprodukcyjnym. Jednak najnowsze odkrycie zmienia ten paradygmat, pokazując, że naturalne zjawiska astronomiczne mogą mieć bardziej złożone skutki dla roślin niż sądzono.<br>
-                
-                W badaniach przeprowadzonych na polach truskawek, naukowcy odkryli zależność między fazami Księżyca a intensywnością kwitnienia oraz plennością roślin. Okazało się, że truskawki sadzone podczas określonych faz Księżyca wykazywały znacząco większą liczbę kwiatów i wyższą zdolność do zapłodnienia.
-                
-                Profesor Maria Hernandez, główny badacz projektu, wyjaśniła: "Nasze badania wykazały, że fazy Księżyca mają istotny wpływ na hormony roślin, które regulują ich reprodukcję. W konsekwencji truskawki sadzone w odpowiednich fazach Księżyca mają lepszą zdolność do zapłodnienia i owocowania".
-                
-                Odkrycie to ma potencjalnie ogromne znaczenie dla przemysłu rolniczego, szczególnie w przypadku uprawy truskawek, które są jednym z najważniejszych owoców na rynku. Jeśli rolnicy będą mogli lepiej kontrolować rozwój swoich upraw poprzez synchronizację z fazami Księżyca, mogą osiągnąć wyższe plony i zwiększyć swoje zyski.
-                
-                Jednakże, mimo że odkrycie to budzi ogromne zainteresowanie, naukowcy z Uniwersytetu Kalifornijskiego w Davis podkreślają, że potrzebne są dalsze badania, aby dokładnie zrozumieć mechanizmy, które leżą u podstaw tego zjawiska. Wpływ Księżyca na rośliny to złożony proces, który wymaga interdyscyplinarnej współpracy między botanikami, astronomami i ekologami.
-                
-                Wniosek z tego odkrycia jest klarowny: natura ciągle zaskakuje nas swoją złożonością i subtelnością oddziaływania. Księżyc, który od wieków był obiektem fascynacji i poezji, okazuje się mieć również praktyczne znaczenie dla naszego życia codziennego, w tym dla uprawy roślin. Odkrycia takie przypominają nam, jak wiele jeszcze mamy do poznania o naszym środowisku i jak cenne mogą być badania naukowe dla naszego zrozumienia natury.
-         
-             </h2>
-         </div>
         
  
     </section>
-    <footer>
-      <ul>
-          <li>E-mail: CarNirvana@gmail.com</li>
-          <li>Numer telefonu: 021 069 037</li>
-          <li>Lokalizacja: CarNirvanowa 69</li>
-          <li>CarNirvana</li>
-      </ul>
-  </footer>
+    <footer class="stopka">
+      
+    </footer>
   <script>
     function updateClock(){
         var now = new Date();
@@ -89,6 +59,75 @@
     setInterval(updateClock, 1000)
     
     updateClock();
+
+    function Article(){
+
+    let article = [
+                {
+                    url: "auto_art2.jpg",
+                    tytul: "Wyprzedaż końca sezonu – rabaty do 30%!",
+                    podtytul: "Ostatnia szansa na zakupy z rabatem.",
+                    kto: "Zespół CarNirvana.",
+                    opis: "Czy marzysz o posiadaniu nowego samochodu, ale zawsze odstraszała Cię cena? To idealny moment, aby spełnić swoje marzenia! CarNirvana ogłasza wyprzedaż końca sezonu, podczas której oferujemy rabaty do 30% na wybrane modele pojazdów. Niezależnie od tego, czy szukasz eleganckiego sedana do codziennych dojazdów do pracy, czy też dynamicznego SUV-a na weekendowe wypady, znajdziesz u nas samochód spełniający Twoje oczekiwania. Nasze rabaty są ograniczone czasowo i ilościowo, więc nie zwlekaj z decyzją – odwiedź nasz komis już dziś i skorzystaj z wyjątkowej okazji!",
+                    Data_wpisu: "13.03.2024.",
+                
+                }
+            ]
+
+            let artykul = document.querySelector(".content");
+            for(let i = 0; i<article.length;i++){
+
+                artykul.innerHTML = `
+                <articlepod>
+                    <img src="${article[i].url}">
+                    <div class="info">
+                        <h1>${article[i].tytul}</h1> 
+                        <h2>${article[i].Data_wpisu}</h2>    
+                        <p>${article[i].kto}</p>
+                    </div>
+                </articlepod>                  
+                    <div class="wiad">
+                        <h2>
+                            ${article[i].opis}
+                        </h2>
+                    </div>
+                `;
+            }
+        
+        
+        }
+        Article()
+
+        function footer(){
+        let stopka = [
+                {
+                    stopka1: "E-mail: CarNirvana@gmail.com",
+                    stopka2: "Numer telefonu: 021 069 037",
+                    stopka3: "Lokalizacja: CarNirvanowa 69",
+                    stopka4: "CarNirvana",
+                
+                }
+                
+            ]
+
+            let footer = document.querySelector(".stopka");
+            for(let i = 0; i<stopka.length;i++){
+
+                footer.innerHTML = `
+                
+                <ul>
+                    <li>${stopka[i].stopka1}</li>
+                    <li>${stopka[i].stopka2}</li>
+                    <li>${stopka[i].stopka3}</li>
+                    <li>${stopka[i].stopka4}</li>
+                </ul>
+
+                `
+            }
+        
+     }
+     footer();
+
 </script>
 </body>
 </html>

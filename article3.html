@@ -30,43 +30,11 @@
 </header>
   <a href="podstrona.html"><h1>Powrót do Aktualności</h1></a>
     <section class="content">
-        <articlepod>
-        <img src="https://klassikauto.pl/wp-content/uploads/2020/09/353F05D5-49E1-4583-A6BC-945B50852CD1.jpeg" style="width: 800px;" height="400px"  alt="">
-        <div class="info">
-            <h1>Smochod Austriackiego malarza</h1> 
-            <h2>21.03.1939</h2>    
-            <p>Wielce Miłościwy Pan Origaii</p>
-        </div>
-        </articlepod>                  
-         <div class="wiad">
-             <h2>Adolf Hitler, niesławny dyktator III Rzeszy, jest często kojarzony z bezwzględnym dążeniem do władzy i swoją rolą w jednym z najczarniejszych rozdziałów historii ludzkości. Jednak poza swoimi ambicjami politycznymi i okrucieństwem, Hitler miał także duże zainteresowanie technologią, w tym samochodami. Jednym z samochodów, który stał się symbolem jego nazwiska, jest kultowy Mercedes-Benz 770K, pojazd, który skupia w sobie zarówno przepych, jak i tyranie niemieckiego reżimu.
-
-              Mercedes-Benz 770, znany również jako "Grosser Mercedes" (niem. "Wielki Mercedes"), był jednym z najbardziej prestiżowych i luksusowych samochodów swojej epoki. Produkowany był przez Daimler-Benz AG w Stuttgarcie, Niemczech, i cieszył się uznaniem wśród rodów królewskich, głów państw oraz wysokich urzędników. To jednak Hitler najczęściej wykorzystywał ten samochód, przekształcając go w symbol swojej władzy i przepychem.
-              
-              Model 770K, wprowadzony w 1938 roku, wyposażony był w potężny 7,7-litrowy silnik rzędowy ośmiocylindrowy, zdolny do rozpędzenia ciężkiego pojazdu do prędkości nawet 100 km/h. Jego imponująca obecność, połączona z zaawansowaną technologią jak na tamte czasy, sprawiła, że był idealnym wyborem na kolumnę samochodową Hitlera i publiczne wystąpienia.
-              
-              Osobisty 770K Hitlera był dostosowany do jego upodobań i wymagań bezpieczeństwa. Wyposażony był w pancerz, szkła kuloodporne i inne środki obronne, zapewniając bezpieczeństwo pasażerowi wobec potencjalnych zagrożeń. Wnętrze było luksusowo wykończone wysokiej jakości materiałami, zapewniając dyktatorowi maksymalny komfort i luksus podczas podróży po Niemczech, udziału w wiecach i paradach wojskowych.
-              
-              Jednym z najbardziej niesławnych obrazów związanym z Hitlerem i jego samochodem jest nagranie, na którym stoi na otwartej platformie dachowej, wygłaszając pasjonujące przemówienia do tłumów oddanych zwolenników. Ten spektakl służył dalszemu podkreśleniu jego kultu osobowości i wzmacnianiu wizerunku charyzmatycznego lidera wybranego, by prowadzić niemiecki naród ku chwale.
-              
-              Jednak podczas gdy Mercedes-Benz 770K symbolizował władzę i prestiż dla Hitlera i reżimu nazistowskiego, niesie ze sobą również ciemną spuściznę. Ten samochód był używany przez Hitlera do podróżowania po podbitych terytoriach, odwiedzając miasta zniszczone przez wojnę i nadzorując wprowadzanie swojej polityki ludobójczej. Stanowi on przerażające przypomnienie o okrucieństwach popełnianych pod jego reżimem i zbrodniach popełnionych podczas II wojny światowej.
-              
-              Po zakończeniu wojny Mercedes-Benz 770K Hitlera dostał się w ręce sił alianckich. Przez lata przechodził różne zmiany właścicieli i ostatecznie trafił do kolekcji muzeów, gdzie często jest wystawiany obok innych artefaktów z tego burzliwego okresu w historii. Pomimo jego związku z jedną z najbardziej znienawidzonych postaci XX wieku, samochód nadal fascynuje historyków i entuzjastów, stanowiąc namacalne ogniwo łączące z mroczną i burzliwą erą.
-              
-              Podsumowując, samochód Adolfa Hitlera, Mercedes-Benz 770K, to nie tylko pojazd; to symbol władzy, ambicji i ciemnych aspektów historii ludzkości. Jego historia stanowi poruszające przypomnienie o uwodzicielskim uroku władzy i konsekwencjach niekontrolowanego despotyzmu. Refleksja nad jego dziedzictwem przypomina nam o ważności czujności w obronie demokracji i zachowywaniu wartości wolności i sprawiedliwości dla wszystkich.
-        
-             </h2>
-         </div>
         
  
     </section>
-    <footer>
-      <ul>
-          <li>E-mail: CarNirvana@gmail.com</li>
-          <li>Numer telefonu: 021 069 037</li>
-          <li>Lokalizacja: CarNirvanowa 69</li>
-          <li>CarNirvana</li>
-      </ul>
+    <footer class="stopka">
+
   </footer>
   <script>
     function updateClock(){
@@ -91,6 +59,75 @@
     setInterval(updateClock, 1000)
     
     updateClock();
+
+    function Article(){
+
+    let article = [
+            {
+                url: "auto_art3.jpg",
+                tytul: "Serwis gwarancyjny dla naszych klientów!",
+                podtytul: "Bezpieczeństwo i spokój na długie lata.",
+                kto: "Zespół CarNirvana.",
+                opis: "W CarNirvana dbamy nie tylko o to, abyś znalazł idealny samochód, ale także o to, abyś cieszył się nim przez wiele lat bez żadnych zmartwień. Dlatego z dumą ogłaszamy wprowadzenie nowego programu serwisowego dla naszych klientów. Nasz program serwisowy obejmuje kompleksową opiekę nad Twoim pojazdem, począwszy od regularnych przeglądów i konserwacji, aż po naprawy gwarancyjne. Nasz wykwalifikowany zespół mechaników i doradców serwisowych zadba o to, aby Twój samochód był zawsze w doskonałej kondycji. Bez względu na markę czy model, możesz być pewien, że oddając swój samochód w nasze ręce, otrzymasz najlepszą opiekę, na którą zasługujesz. Dołącz do grona zadowolonych klientów CarNirvana i ciesz się spokojem podczas podróży!",
+                Data_wpisu: "11.03.2024.",
+            
+            }
+        ]
+
+        let artykul = document.querySelector(".content");
+        for(let i = 0; i<article.length;i++){
+
+            artykul.innerHTML = `
+            <articlepod>
+                <img src="${article[i].url}">
+                <div class="info">
+                    <h1>${article[i].tytul}</h1> 
+                    <h2>${article[i].Data_wpisu}</h2>    
+                    <p>${article[i].kto}</p>
+                </div>
+            </articlepod>                  
+                <div class="wiad">
+                    <h2>
+                        ${article[i].opis}
+                    </h2>
+                </div>
+            `;
+        }
+    
+    
+    }
+    Article()
+
+    function footer(){
+        let stopka = [
+                {
+                    stopka1: "E-mail: CarNirvana@gmail.com",
+                    stopka2: "Numer telefonu: 021 069 037",
+                    stopka3: "Lokalizacja: CarNirvanowa 69",
+                    stopka4: "CarNirvana",
+                
+                }
+                
+            ]
+
+            let footer = document.querySelector(".stopka");
+            for(let i = 0; i<stopka.length;i++){
+
+                footer.innerHTML = `
+                
+                <ul>
+                    <li>${stopka[i].stopka1}</li>
+                    <li>${stopka[i].stopka2}</li>
+                    <li>${stopka[i].stopka3}</li>
+                    <li>${stopka[i].stopka4}</li>
+                </ul>
+
+                `
+            }
+        
+     }
+     footer();
+
 </script>
 </body>
 </html>
